@@ -39,15 +39,6 @@ from detectron2.evaluation import (
 )
 from detectron2.modeling import GeneralizedRCNNWithTTA
 
-from detectron2.data.datasets import register_coco_instances
-
-register_coco_instances('live_cell', {}, 
-                        '/kaggle/working/centermask2/datasets/coco/annotations/instances_train2017.json', 
-                       '/kaggle/working/centermask2/datasets/coco/train2017')
-register_coco_instances('live_cell', {}, 
-                        '/kaggle/working/centermask2/datasets/coco/annotations/instances_val2017.json', 
-                       '/kaggle/working/centermask2/datasets/coco/val2017')
-
 def build_evaluator(cfg, dataset_name, output_folder=None):
     """
     Create evaluator(s) for a given dataset.
